@@ -1,0 +1,148 @@
+/* Custom styles for the chatbot (Bootstrap CSS imported in chatbot.jsx) */
+
+/* Reset default margins and set global styles */
+body {
+  background-color: #1a202c; /* Dark background similar to your original rgb(65, 45, 43) */
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Chat container styling */
+.chat-container {
+  max-width: 450px; /* Matches your original w-96 (384px) with slight increase */
+  width: 100%;
+  height: 80vh; /* Responsive height */
+  background: #2d3748; /* Dark gray, similar to bg-gray-900 */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Optional header for branding */
+.chat-container::before {
+  content: "AI Chatbot";
+  display: block;
+  background: linear-gradient(90deg, #007bff, #00d4ff); /* Bootstrap-inspired gradient */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Chat box (message area) */
+.chat-box {
+  flex-grow: 1;
+  height: 64px; /* Maintains your original height, flex-grow allows expansion */
+  overflow-y: auto;
+  padding: 20px;
+  background: #1f2937; /* Darker gray, similar to bg-gray-800 */
+  scroll-behavior: smooth; /* Smooth scrolling for auto-scroll */
+}
+
+/* Message styling */
+.chat-box .mb-2 {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.chat-box .text-right {
+  justify-content: flex-end;
+}
+
+.chat-box .text-left {
+  justify-content: flex-start;
+}
+
+.chat-box .inline-block {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.chat-box .bg-blue-500 {
+  background: #007bff; /* Bootstrap primary blue for user messages */
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-box .bg-gray-600 {
+  background: #4b5563; /* Dark gray for bot messages, matches dark theme */
+  color: #e5e7eb; /* Light text for contrast */
+  border-bottom-left-radius: 2px;
+}
+
+/* Input box styling */
+.input-box {
+  padding: 15px;
+  background: #2d3748; /* Matches chat-container background */
+  border-top: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+}
+
+/* Input styling with Bootstrap form-control */
+.input-box input.form-control {
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 1px solid #6b7280;
+  margin-right: 10px;
+  font-size: 1rem;
+  background: #374151; /* Dark input background */
+  color: #e5e7eb; /* Light text */
+}
+
+.input-box input.form-control::placeholder {
+  color: #9ca3af; /* Light gray placeholder */
+}
+
+/* Button styling */
+.input-box button.bg-blue-500 {
+  border-radius: 25px;
+  padding: 10px 20px;
+  background: #007bff; /* Bootstrap primary blue */
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.input-box button.bg-blue-500:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+/* Scrollbar styling for chat box */
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #6b7280; /* Dark gray scrollbar */
+  border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+  background: #1f2937; /* Matches chat-box background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .chat-container {
+      max-width: 100%;
+      height: 100vh;
+      border-radius: 0;
+  }
+
+  .chat-container::before {
+      font-size: 1.25rem;
+      padding: 10px;
+  }
+}
