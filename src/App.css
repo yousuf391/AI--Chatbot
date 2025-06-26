@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Custom styles for the chatbot (Bootstrap CSS imported in chatbot.jsx) */
 
 /* Reset default margins and set global styles */
@@ -146,3 +147,39 @@ body {
       padding: 10px;
   }
 }
+=======
+body {
+  background-color:rgb(65, 45, 43); /* Softer, more vibrant red */
+  font-family: 'Roboto', sans-serif; /* Changed font for a cleaner look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  text-align: center;
+  background-color: #fff; /* Light background for the container */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(66, 21, 21, 0.1); /* Soft shadow for depth */
+  max-width: 90%;
+  width: 500px;
+  color: #333; /* Dark text for contrast */
+}
+
+
+h1 {
+  font-size: 36px;
+  color:rgb(15, 27, 39); /* A dark shade for headings */
+  margin-bottom: 20px;
+ 
+}
+
+p {
+  font-size: 16px;
+  color: #7F8C8D; /* Softer text color */
+}
+>>>>>>> b60dafb104fd81f370d9d2dbebe824dba75fc7c2
